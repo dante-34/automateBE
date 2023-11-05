@@ -27,9 +27,9 @@ public class Main {
             String result1 = response1.get();
             String result2 = response2.get();
 
-            System.out.println("Response for Tel Aviv: ");//+ result1);
+            System.out.println("Response for Tel Aviv: ");
             responseProcessor.processAndPrintResponse(result1);
-            System.out.println("Response for New York City: "); //+ result2);
+            System.out.println("Response for New York City: ");
             responseProcessor.processAndPrintResponse(result2);
         } catch (Exception e) {
             e.printStackTrace();
