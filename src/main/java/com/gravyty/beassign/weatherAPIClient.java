@@ -13,8 +13,7 @@ public class weatherAPIClient {
                     HttpGet httpGet = new HttpGet(url);
 
                     try (CloseableHttpResponse response = httpClient.execute(httpGet)) {
-                        int responseCode = response.getStatusLine().getStatusCode();
-                        System.out.println(" ~~~!!! Response Code: !!!~~~ " + responseCode);
+                        //System.out.println("Response Code==" + response.getStatusLine().getStatusCode());
                         return EntityUtils.toString(response.getEntity());
                     }
                 } catch (IOException e) {
@@ -23,18 +22,8 @@ public class weatherAPIClient {
                 }
             }
 }
-/*            HttpClient httpClient = HttpClients.createDefault();
-            HttpGet httpGet = new HttpGet(url);
-
-            try {
-                HttpResponse response = httpClient.execute(httpGet);
-                return EntityUtils.toString(response.getEntity());
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
-            }*/
-
- /// RESTful Java client: https://alvinalexander.com/java/java-apache-httpclient-restful-client-examples/
+/// Scratchpad
+/// RESTful Java client: https://alvinalexander.com/java/java-apache-httpclient-restful-client-examples/
 /// https://www.geeksforgeeks.org/try-with-resources-feature-in-java/
-
-// ISO 3166 country codes : "Tel-Aviv,IL","London,GB","New York,US-NY,US"
+/// Cities names with ISO 3166 compatible country codes : "Tel-Aviv,IL","London,GB","New York,US-NY,US"
+/// https://dzone.com/articles/java-concurrency-multi-threading-with-executorserv
